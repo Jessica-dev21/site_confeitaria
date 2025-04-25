@@ -1,0 +1,105 @@
+<!DOCTYPE html> <!-- Informa ao navegador que este é um documento HTML5 -->
+<html lang="pt-BR"> <!-- Início do documento HTML. O atributo lang define o idioma como português do Brasil -->
+<head> <!-- Início da seção de configurações da página (não aparece visualmente) -->
+  <meta charset="UTF-8" /> <!-- Define o conjunto de caracteres para suportar acentuação -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Faz o site se adaptar a diferentes tamanhos de tela (responsivo) -->
+  <meta name="description" content="Confeitaria artesanal com bolos e doces feitos com amor. Veja nossos produtos e entre em contato!" /> <!-- Descrição da página usada nos resultados do Google -->
+  <title>Confeitaria Delícia</title> <!-- Título da página (aparece na aba do navegador) -->
+
+  <link rel="stylesheet" href="/css/styles.css">
+  <!-- SEO: boas práticas -->
+  <link rel="canonical" href="https://www.suaconfeitaria.com.br/" /> <!-- URL principal da página, evita conteúdo duplicado para o Google -->
+  <meta name="robots" content="index, follow" /> <!-- Permite que robôs de busca indexem e sigam os links da página -->
+</head>
+
+<body> <!-- Início do conteúdo visível da página -->
+
+  <!-- Cabeçalho -->
+  <header> <!-- Define o cabeçalho do site -->
+    <nav aria-label="Navegação principal"> <!-- Menu de navegação principal com acessibilidade -->
+      <ul> <!-- Lista de links do menu -->
+        <li><a href="#quem-somos">Quem Somos</a></li> <!-- Link que leva para a seção "Quem Somos" -->
+        <li><a href="#produtos">Produtos</a></li> <!-- Link para a seção "Produtos" -->
+        <li><a href="#contato">Contato</a></li> <!-- Link para a seção "Contato" -->
+      </ul>
+    </nav>
+    <h1>Confeitaria Delícia</h1> <!-- Título principal da página -->
+    <p>Sabor artesanal em cada pedaço 🍰</p> <!-- Subtítulo ou slogan da confeitaria -->
+  </header>
+
+  <!-- Quem somos -->
+  <section id="quem-somos"> <!-- Seção sobre a empresa. O ID permite o link direto do menu -->
+    <h2>Quem é a Confeitaria Delícia</h2> <!-- Título da seção -->
+    <p>
+      Somos apaixonados por confeitaria! Desde 2010, criamos bolos e doces artesanais com ingredientes frescos e muito carinho. Nossa missão é adoçar momentos especiais com qualidade e sabor.
+    </p> <!-- Texto com a apresentação da confeitaria -->
+  </section>
+
+  <!-- Galeria de Produtos -->
+  <section id="produtos" aria-labelledby="produtos-titulo"> <!-- Seção de produtos com acessibilidade -->
+    <h2 id="produtos-titulo">Nossos Produtos</h2> <!-- Título principal da seção de produtos -->
+
+    <!-- Categoria: Bolos -->
+    <article aria-labelledby="bolos-titulo"> <!-- Bloco com os produtos da categoria Bolos -->
+      <h3 id="bolos-titulo">Bolos</h3> <!-- Título da subcategoria -->
+      <ul> <!-- Lista de bolos -->
+        <li>
+          <figure> <!-- Figura com imagem e legenda -->
+            <img src="imagens/bolo-chocolate.jpg" alt="Bolo de chocolate com cobertura cremosa" /> <!-- Imagem do produto com descrição para acessibilidade -->
+            <figcaption>Bolo de Chocolate</figcaption> <!-- Legenda da imagem -->
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="imagens/bolo-morango.jpg" alt="Bolo recheado com morango e chantilly" />
+            <figcaption>Bolo de Morango</figcaption>
+          </figure>
+        </li>
+      </ul>
+    </article>
+
+    <!-- Categoria: Doces -->
+    <article aria-labelledby="doces-titulo"> <!-- Bloco com os produtos da categoria Doces -->
+      <h3 id="doces-titulo">Doces</h3> <!-- Título da subcategoria -->
+      <ul> <!-- Lista de doces -->
+        <li>
+          <figure>
+            <img src="imagens/beijinho.jpg" alt="Beijinho coberto com coco ralado" />
+            <figcaption>Beijinho</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="imagens/brigadeiro.jpg" alt="Brigadeiro tradicional com granulado" />
+            <figcaption>Brigadeiro</figcaption>
+          </figure>
+        </li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato"> <!-- Seção com o formulário de contato -->
+    <h2>Entre em Contato</h2> <!-- Título da seção -->
+    <form action="enviar.php" method="post"> <!-- Formulário que envia os dados para um script PHP -->
+      <label for="nome">Nome:</label> <!-- Rótulo para o campo de nome -->
+      <input type="text" id="nome" name="nome" required /> <!-- Campo de texto para o nome -->
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required /> <!-- Campo para o e-mail com validação -->
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="5" required></textarea> <!-- Área para digitar a mensagem -->
+
+      <button type="submit">Enviar</button> <!-- Botão que envia o formulário -->
+    </form>
+  </section>
+
+  <!-- Rodapé -->
+  <footer> <!-- Rodapé do site -->
+    <p>&copy; 2025 Confeitaria Delícia. Todos os direitos reservados.</p> <!-- Direitos autorais -->
+    <p>Instagram: <a href="https://instagram.com/suaconfeitaria" target="_blank" rel="noopener"> @suaconfeitaria</a></p> <!-- Link para o Instagram da empresa -->
+  </footer>
+
+</body>
+</html> <!-- Fim do documento HTML -->

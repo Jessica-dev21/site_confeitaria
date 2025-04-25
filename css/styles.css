@@ -1,0 +1,178 @@
+/* Reset e base */
+* {
+    margin: 0;               /* Remove as margens padrão de todos os elementos */
+    padding: 0;              /* Remove os preenchimentos padrão de todos os elementos */
+    box-sizing: border-box;  /* Inclui padding e border dentro do tamanho total do elemento */
+  }
+  
+  :root {
+    --cor-principal: #d57c7c;                    /* Cor principal usada no site */
+    --cor-secundaria: #fff5f5;                   /* Cor de fundo clara */
+    --cor-texto: #3b3b3b;                        /* Cor padrão para textos */
+    --fonte-principal: 'Segoe UI', sans-serif;  /* Fonte principal usada no site */
+  }
+  
+  body {
+    font-family: var(--fonte-principal);        /* Usa a fonte definida na variável */
+    background-color: var(--cor-secundaria);    /* Define a cor de fundo da página */
+    color: var(--cor-texto);                    /* Cor padrão dos textos */
+    line-height: 1.6;                            /* Altura da linha para melhorar a leitura */
+    padding: 1rem;                               /* Espaço interno ao redor do conteúdo */
+  }
+  
+  /* Estilização do cabeçalho */
+  header {
+    text-align: center;                         /* Centraliza o texto do cabeçalho */
+    padding: 2rem 1rem;                          /* Espaçamento interno (topo/baixo, lados) */
+    background-color: var(--cor-principal);     /* Fundo com a cor principal */
+    color: white;                               /* Texto branco */
+  }
+  
+  header h1 {
+    font-size: 2.5rem;                          /* Tamanho da fonte do título principal */
+    margin-bottom: 0.5rem;                      /* Espaço abaixo do título */
+  }
+  
+  header p {
+    font-size: 1.2rem;                          /* Tamanho da fonte do subtítulo */
+  }
+  
+  /* Estilo da navegação (menu) */
+  nav ul {
+    list-style: none;                          /* Remove os marcadores da lista */
+    display: flex;                             /* Deixa os itens em linha (flexbox) */
+    justify-content: center;                   /* Centraliza os itens */
+    gap: 1.5rem;                                /* Espaço entre os itens do menu */
+    padding: 1rem 0;                            /* Espaço em cima e embaixo da navegação */
+  }
+  
+  nav a {
+    text-decoration: none;                    /* Remove o sublinhado dos links */
+    color: white;                             /* Define a cor branca para os links */
+    font-weight: bold;                        /* Deixa o texto em negrito */
+  }
+  
+  nav a:hover {
+    text-decoration: underline;               /* Sublinha o link quando passar o mouse */
+  }
+  
+  /* Estilo geral das seções */
+  section {
+    margin: 2rem auto;                        /* Espaço externo e centraliza horizontalmente */
+    max-width: 900px;                         /* Largura máxima da seção */
+    padding: 0 1rem;                          /* Espaço interno nas laterais */
+  }
+  
+  section h2 {
+    font-size: 2rem;                          /* Tamanho da fonte do título da seção */
+    margin-bottom: 1rem;                      /* Espaço abaixo do título */
+    text-align: center;                       /* Centraliza o título */
+    color: var(--cor-principal);             /* Usa a cor principal */
+  }
+  
+  article {
+    margin-bottom: 2rem;                      /* Espaço abaixo de cada artigo */
+  }
+  
+  article h3 {
+    font-size: 1.5rem;                        /* Tamanho do título da categoria */
+    margin-bottom: 1rem;                      /* Espaço abaixo do título */
+  }
+  
+  /* Estilo da galeria de produtos */
+  ul {
+    list-style: none;                         /* Remove marcadores da lista */
+    display: flex;                            /* Deixa os itens em linha */
+    flex-wrap: wrap;                          /* Quebra para a próxima linha se não couber */
+    gap: 1rem;                                 /* Espaço entre os itens */
+    justify-content: center;                  /* Centraliza os itens */
+    padding: 0;                                /* Remove o padding */
+  }
+  
+  figure {
+    background-color: white;                  /* Fundo branco para o card */
+    border: 1px solid #eee;                   /* Borda clara */
+    border-radius: 8px;                       /* Cantos arredondados */
+    overflow: hidden;                         /* Oculta partes que ultrapassarem */
+    width: 200px;                             /* Largura fixa */
+    text-align: center;                       /* Centraliza o conteúdo */
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);     /* Sombra leve */
+    transition: transform 0.3s ease;          /* Animação suave ao passar o mouse */
+  }
+  
+  figure:hover {
+    transform: scale(1.05);                   /* Aumenta ligeiramente o tamanho ao passar o mouse */
+  }
+  
+  figure img {
+    width: 100%;                              /* Imagem ocupa toda a largura */
+    height: auto;                             /* Altura proporcional */
+    display: block;                           /* Remove espaço em branco abaixo da imagem */
+  }
+  
+  figcaption {
+    padding: 0.5rem;                          /* Espaço interno */
+    font-weight: bold;                        /* Texto em negrito */
+    background-color: var(--cor-principal);   /* Fundo com a cor principal */
+    color: white;                             /* Texto branco */
+  }
+  
+  /* Estilização do formulário */
+  form {
+    display: flex;                            /* Usa flexbox */
+    flex-direction: column;                   /* Coloca os elementos em coluna */
+    gap: 1rem;                                 /* Espaço entre os elementos */
+    max-width: 600px;                         /* Largura máxima do formulário */
+    margin: 0 auto;                           /* Centraliza horizontalmente */
+  }
+  
+  label {
+    font-weight: bold;                        /* Rótulo em negrito */
+  }
+  
+  input, textarea, button {
+    padding: 0.75rem;                         /* Espaço interno */
+    border: 1px solid #ccc;                   /* Borda cinza clara */
+    border-radius: 6px;                       /* Cantos arredondados */
+    font-size: 1rem;                          /* Tamanho da fonte */
+    width: 100%;                              /* Ocupa toda a largura disponível */
+  }
+  
+  button {
+    background-color: var(--cor-principal);   /* Cor de fundo do botão */
+    color: white;                             /* Texto branco */
+    border: none;                             /* Sem borda */
+    cursor: pointer;                          /* Cursor de mão ao passar o mouse */
+    transition: background-color 0.2s;        /* Animação suave na mudança de cor */
+  }
+  
+  button:hover {
+    background-color: #c56969;                /* Cor alternativa ao passar o mouse */
+  }
+  
+  /* Rodapé */
+  footer {
+    background-color: var(--cor-principal);   /* Cor de fundo */
+    color: white;                             /* Texto branco */
+    text-align: center;                       /* Centraliza o conteúdo */
+    padding: 1.5rem;                          /* Espaço interno */
+    margin-top: 2rem;                         /* Espaço acima do rodapé */
+  }
+  
+  footer a {
+    color: #fff;                              /* Link branco */
+    text-decoration: underline;              /* Sublinhado para links */
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;                /* Muda a direção do menu para coluna */
+      gap: 0.5rem;                            /* Menor espaçamento entre os itens */
+    }
+  
+    figure {
+      width: 100%;                            /* Ocupa toda a largura disponível */
+      max-width: 300px;                       /* Limita a largura máxima */
+    }
+  }
